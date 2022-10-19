@@ -37,4 +37,4 @@ for deal in deals:
   if star_raitings:
     star_raitings = star_raitings.text.strip()
   
-  print(f'{title}\n  {location}\n  {original_price}\n  {discount_price}\n  {star_raitings} Stars\n')
+  print(f'{title}\n  {location}\n  Original Price: {original_price}\n  Discounted Price: {discount_price}\n  {star_raitings} Star Rating\n')
