@@ -24,17 +24,25 @@ for deal in deals:
   location = deal.find('span', class_='cui-location-name')
   if location:
     location = location.text.strip()
+  else:
+    continue
   
   original_price = deal.find(class_='cui-price-original')
   if original_price:
     original_price = original_price.text.strip()
-
+  else:
+    continue
+  
   discount_price = deal.find(class_='cui-price-discount')
   if discount_price:
     discount_price = discount_price.text.strip()
-
+  else:
+    continue
+  
   star_raitings = deal.find(class_='numeric-count')
   if star_raitings:
     star_raitings = star_raitings.text.strip()
+  else:
+    continue
   
   print(f'{title}\n  {location}\n  Original Price: {original_price}\n  Discounted Price: {discount_price}\n  {star_raitings} Star Rating\n')
